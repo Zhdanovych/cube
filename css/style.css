@@ -108,35 +108,35 @@ body {
   transform: rotateY(180deg) translateZ(-200px);
 }
 .wrapper:hover .back2 {
-  transform: rotateY(180deg) translateZ(-200px);
+  transform: rotateY(180deg) translateZ(-199px);
   background-color: var(--bg-color-second);
 }
 .wrapper:hover .top {
   transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
 }
 .wrapper:hover .top2 {
-  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+  transform: rotateX(-270deg) translateZ(99px) translateY(-100px);
   background-color: var(--bg-color-second);
 }
 .wrapper:hover .bottom {
   transform: rotateX(270deg) translateZ(100px) translateY(100px);
 }
 .wrapper:hover .bottom2 {
-  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+  transform: rotateX(270deg) translateZ(99px) translateY(100px);
   background-color: var(--bg-color-second);
 }
 .wrapper:hover .left {
   transform: rotateY(270deg) translateZ(100px) translateX(-100px);
 }
 .wrapper:hover .left2 {
-  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+  transform: rotateY(270deg) translateZ(99px) translateX(-100px);
   background-color: var(--bg-color-second);
 }
 .wrapper:hover .right {
   transform: rotateY(-270deg) translateZ(100px) translateX(100px);
 }
 .wrapper:hover .right2 {
-  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+  transform: rotateY(-270deg) translateZ(99px) translateX(100px);
   background-color: var(--bg-color-second);
 }
 @keyframes rotate {
