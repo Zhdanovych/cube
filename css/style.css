@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bg-color-main: black;
+  --bg-color-first: blue;
+  --bg-color-second: yellow;
+}
+
+html {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+}
+body {
+  margin: 50px;
+  padding: 0;
+  background-color: var(--bg-color-main);
+}
+.wrapper {
+  margin-top: 250px;
+  perspective: 1100px;
+  perspective-origin: 50% 50%;
+}
+.cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 20s infinite linear;
+}
+.cube > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color-first);
+  outline: 2px solid white;
+  color: white;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.font-first {
+  color: var(--bg-color-second);
+}
+.font-second {
+  color: var(--bg-color-first);
+}
+.front {
+  transform: translateZ(-100px);
+}
+.front2 {
+  transform: translateZ(-100px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(-100px);
+}
+.back2 {
+  transform: rotateY(180deg) translateZ(-99px);
+}
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+.top2 {
+  transform: rotateX(-270deg) translateY(-100px) translateZ(-1px);
+  transform-origin: top center;
+}
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+.bottom2 {
+  transform: rotateX(270deg) translateY(100px) translateZ(-1px);
+  transform-origin: bottom center;
+}
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: top left;
+}
+.left2 {
+  transform: rotateY(270deg) translateX(-100px) translateZ(-1px);
+  transform-origin: top left;
+}
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+.right2 {
+  transform: rotateY(-270deg) translateX(100px) translateZ(-1px);
+  transform-origin: top right;
+}
+
+.wrapper:hover .front {
+  transform: translateZ(-200px);
+}
+.wrapper:hover .front2 {
+  transform: translateZ(-200px);
+  background-color: var(--bg-color-second);
+}
+.wrapper:hover .back {
+  transform: rotateY(180deg) translateZ(-200px);
+}
+.wrapper:hover .back2 {
+  transform: rotateY(180deg) translateZ(-200px);
+  background-color: var(--bg-color-second);
+}
+.wrapper:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+.wrapper:hover .top2 {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+  background-color: var(--bg-color-second);
+}
+.wrapper:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+.wrapper:hover .bottom2 {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+  background-color: var(--bg-color-second);
+}
+.wrapper:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+.wrapper:hover .left2 {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+  background-color: var(--bg-color-second);
+}
+.wrapper:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+.wrapper:hover .right2 {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+  background-color: var(--bg-color-second);
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
